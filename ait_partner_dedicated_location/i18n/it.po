@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_location_auto_create
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20240115\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-25 15:59+0000\n"
+"PO-Revision-Date: 2024-01-25 15:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_location_auto_create
+#: model_terms:ir.ui.view,arch_db:partner_location_auto_create.res_config_settings_view_form_inherith
+msgid "Add custom routes for customers"
+msgstr "Aggiungi percorsi personalizzati per i clienti"
+
+#. module: partner_location_auto_create
+#: model_terms:ir.ui.view,arch_db:partner_location_auto_create.res_config_settings_view_form_inherith
+msgid "Add custom routes for subcontractors"
+msgstr "Aggiungi percorsi personalizzati per i subappaltatori"
+
+#. module: partner_location_auto_create
+#: model_terms:ir.ui.view,arch_db:partner_location_auto_create.res_config_settings_view_form_inherith
+msgid "Add custom routes for vendors"
+msgstr "Aggiungi percorsi personalizzati per i fornitori"
+
+#. module: partner_location_auto_create
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_config_settings__customer_parent
+msgid "Customer Location Parent"
+msgstr "Ubicazione padre clienti"
+
+#. module: partner_location_auto_create
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_partner__dedicated_customer_location
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_users__dedicated_customer_location
+msgid "Dedicated Customer Location"
+msgstr "Ubicazione dedicata dei clienti"
+
+#. module: partner_location_auto_create
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_partner__dedicated_subcontracting_location
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_users__dedicated_subcontracting_location
+msgid "Dedicated Subcontracting Location"
+msgstr "Ubicazione dedicata dei subappaltatori"
+
+#. module: partner_location_auto_create
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_partner__dedicated_vendor_location
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_users__dedicated_vendor_location
+msgid "Dedicated Vendor Location"
+msgstr "Ubicazione dedicata dei fornitori"
+
+#. module: partner_location_auto_create
+#. odoo-python
+#: code:addons/partner_location_auto_create/models/res_partner.py:0
+#, python-format
+msgid ""
+"Missing warehouse configuration!\n"
+"Add custom route in warehouse settings."
+msgstr ""
+"Configurazione mancante nel magazzino!\n"
+"Aggiungi percorso personalizzato nelle impostazioni del magazzino."
+
+#. module: partner_location_auto_create
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_config_settings__subcontracting_parent
+msgid "Subcontracting Location Parent"
+msgstr "Ubicazione padre subappaltatori"
+
+#. module: partner_location_auto_create
+#: model:ir.model.fields,field_description:partner_location_auto_create.field_res_config_settings__vendor_parent
+msgid "Vendor Location Parent"
+msgstr "Ubicazione padre fornitori"
+
+#. module: partner_location_auto_create
+#: model_terms:ir.ui.view,arch_db:partner_location_auto_create.view_partner_form_inherit
+msgid "Warehouse"
+msgstr "Magazzino"
+
+#. module: partner_location_auto_create
+#: model:ir.model,name:partner_location_auto_create.model_res_config_settings
+msgid "res.config.settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: partner_location_auto_create
+#: model:ir.model,name:partner_location_auto_create.model_res_partner
+msgid "res.partner"
+msgstr ""

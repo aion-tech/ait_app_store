@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page name="dedicated_customer_location" string="Warehouse">
+                        <group name="container_row_2">
+                            <field name="dedicated_customer_location" />
+                            <field name="dedicated_vendor_location" />
+                            <field name="dedicated_subcontracting_location" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
