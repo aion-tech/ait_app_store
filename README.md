@@ -1,0 +1,1 @@
+# ait_partner_dedicated_location
