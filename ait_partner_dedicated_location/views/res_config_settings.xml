@@ -1,56 +1,56 @@
 <odoo>
     <data>
-        <record model="ir.ui.view" id='res_config_settings_view_form_inherith'>
+        <record model="ir.ui.view" id="res_config_settings_view_form_inherit">
             <field name="name">Warehouse</field>
-            <field name="model">res.config</field>
-            <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//div[@id='use_own_routes'][1]" position="after">
-                    <div class="col-12 col-lg-6 o_setting_box"
-                                id="customer_parent_own_routes"
-                                attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
-                        <div class="o_setting_right_pane">
-                            <label for="customer_parent"/>
-                            <div class="text-muted">
-                                Add custom routes for customers
-                            </div>
-                            <div class="content-group">
-                                <div class="mt8" attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
-                                    <field name="customer_parent"/>
-                                </div>
+                <xpath expr="//setting[@id='use_own_routes'][1]" position="after">
+
+                    <div class="row" id="customer_parent_own_routes"
+                         invisible="not group_stock_adv_location">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <label for="customer_parent" class="o_setting_label"/>
+                            <div class="o_setting_right_pane">
+                                <field name="customer_parent"/>
+                                <span class="text-muted">Add custom routes for customers</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 o_setting_box"
-                                id="vendor_parent_own_routes"
-                                attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
-                        <div class="o_setting_right_pane">
-                            <label for="vendor_parent"/>
-                            <div class="text-muted">
-                                Add custom routes for vendors
-                            </div>
-                            <div class="content-group">
-                                <div class="mt8" attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
-                                    <field name="vendor_parent"/>
-                                </div>
+
+                    <div class="row" id="vendor_parent_own_routes"
+                         invisible="not group_stock_adv_location">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <label for="vendor_parent" class="o_setting_label"/>
+                            <div class="o_setting_right_pane">
+                                <field name="vendor_parent"/>
+                                <span class="text-muted">Add custom routes for vendors</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 o_setting_box"
-                                id="subcontracting_parent_own_routes"
-                                attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
-                        <div class="o_setting_right_pane">
-                            <label for="subcontracting_parent"/>
-                            <div class="text-muted">
-                                Add custom routes for subcontractors
-                            </div>
-                            <div class="content-group">
-                                <div class="mt8" attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
-                                    <field name="subcontracting_parent"/>
-                                </div>
+
+                    <div class="row" id="subcontracting_parent_own_routes"
+                         invisible="not group_stock_adv_location">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <label for="subcontracting_parent" class="o_setting_label"/>
+                            <div class="o_setting_right_pane">
+                                <field name="subcontracting_parent"/>
+                                <span class="text-muted">Add custom routes for subcontractors</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="row" id="rental_parent_own_routes"
+                         invisible="not group_stock_adv_location">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <label for="rental_parent" class="o_setting_label"/>
+                            <div class="o_setting_right_pane">
+                                <field name="rental_parent"/>
+                                <span class="text-muted">Add custom routes for rentals</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </xpath>
             </field>
         </record>

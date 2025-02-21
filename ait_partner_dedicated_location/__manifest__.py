@@ -12,7 +12,7 @@
     "category": "Warehouse",
     'version': '17.0.1.0.0',
 
-    'depends': ['stock'],
+    'depends': ['stock','base','mrp_subcontracting'],
 
     'data': [
         'views/res_partner_view.xml',

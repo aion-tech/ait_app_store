@@ -4,16 +4,33 @@
         <record id="view_partner_form_inherit" model="ir.ui.view">
             <field name="name">res.partner.form</field>
             <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='sales_purchases']" position="after">
                     <page name="dedicated_customer_location" string="Warehouse">
                         <group name="container_row_2">
-                            <field name="dedicated_customer_location" />
-                            <field name="dedicated_vendor_location" />
-                            <field name="dedicated_subcontracting_location" />
+                            <field name="dedicated_customer_location_created" invisible="1"/>
+                            <field name="dedicated_vendor_location_created" invisible="1"/>
+                            <field name="dedicated_subcontracting_location_created" invisible="1"/>
+                            <field name="dedicated_rental_location_created" invisible="1"/>
+                            <field name="dedicated_customer_location" readonly="dedicated_customer_location_created"/>
+                            <field name="dedicated_vendor_location" readonly="dedicated_vendor_location_created"/>
+                            <field name="dedicated_subcontracting_location" readonly="dedicated_subcontracting_location_created"/>
+                            <field name="dedicated_rental_location" readonly="dedicated_rental_location_created"/>
                         </group>
                     </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_rental_location_form" model="ir.ui.view">
+            <field name="name">res.partner.rental.location.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="mrp_subcontracting.view_partner_mrp_subcontracting_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_stock_subcontractor']" position="after">
+                    <field name="property_stock_rental"/>
+                    <separator/>
                 </xpath>
             </field>
         </record>
