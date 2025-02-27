@@ -10,9 +10,9 @@
     "website": "https://aion-tech.it/",
 
     "category": "Warehouse",
-    'version': '16.0.1.0.0',
+    'version': '16.0.1.0.1',
 
-    'depends': ['stock'],
+    'depends': ['stock', 'mrp_subcontracting'],
 
     'data': [
         'views/res_partner_view.xml',

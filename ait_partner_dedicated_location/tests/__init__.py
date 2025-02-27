@@ -1,0 +1,1 @@
+from . import test_stock_partner_location_auto_create

@@ -51,6 +51,21 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-lg-6 o_setting_box"
+                                id="rental_parent_own_routes"
+                                attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
+                        <div class="o_setting_right_pane">
+                            <label for="rental_parent"/>
+                            <div class="text-muted">
+                                Add custom routes for rental
+                            </div>
+                            <div class="content-group">
+                                <div class="mt8" attrs="{'invisible': [('group_stock_adv_location', '=', False)]}">
+                                    <field name="rental_parent"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </xpath>
             </field>
         </record>
