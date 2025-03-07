@@ -9,6 +9,8 @@
     "author": "Aion Tech s.r.l.",
     "website": "https://aion-tech.it/",
 
+    "license": 'OPL-1',
+
     "category": "Warehouse",
     'version': '16.0.1.0.1',
 
