@@ -10,6 +10,9 @@
     "website": "https://aion-tech.it/",
 
     "license": 'OPL-1',
+    "price": 14.99,
+    "currency": "EUR",
+    "support": "support@aion-tech.odoo.com",
 
     "category": "Warehouse",
     'version': '18.0.1.0.0',
