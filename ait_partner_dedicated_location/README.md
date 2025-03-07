@@ -28,17 +28,3 @@ To use this module, you need to:
 ![image](https://github.com/user-attachments/assets/2ae5d1db-c94f-486b-b100-56eca8dd4b4e)
 
 * The module will create dedicated customer/vendor/subcontracting/rental locations for the partner and assign them to the specific fields
-
-
-Credits
-=======
-
-Authors
-* Aion Tech
-
-Contributors
-* Federico Medici
-* Francesco Germani
-
-Maintainers
-* This module is maintained by Aion Tech.
