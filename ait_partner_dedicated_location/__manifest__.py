@@ -24,7 +24,7 @@
         'views/res_config_settings.xml',
     ],
 
-    'images': ['static/description/thumbnail.png']
+    'images': ['static/description/thumbnail.png'],
     
     "installable": True,
     "application": False,
