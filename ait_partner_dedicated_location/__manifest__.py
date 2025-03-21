@@ -23,6 +23,9 @@
         'views/res_partner_view.xml',
         'views/res_config_settings.xml',
     ],
+
+    'images': ['static/description/thumbnail.png']
+    
     "installable": True,
     "application": False,
 }
