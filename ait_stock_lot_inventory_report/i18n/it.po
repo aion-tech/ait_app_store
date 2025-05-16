@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eur_stock_lot_inventory_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20250427\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-07 13:50+0000\n"
+"PO-Revision-Date: 2025-05-07 13:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: eur_stock_lot_inventory_report
+#: model_terms:ir.ui.view,arch_db:eur_stock_lot_inventory_report.view_inventory_wizard_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__create_uid
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__create_date
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.actions.act_window,name:eur_stock_lot_inventory_report.stock_inventory_detail_action
+#: model:ir.model,name:eur_stock_lot_inventory_report.model_stock_inventory_detail
+msgid "Detailed inventory by lot"
+msgstr "Inventario dettagliato per lotti"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__display_name
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__date_end
+msgid "End Date"
+msgstr "Data di fine"
+
+#. module: eur_stock_lot_inventory_report
+#: model_terms:ir.ui.view,arch_db:eur_stock_lot_inventory_report.view_inventory_wizard_form
+msgid "Generate Inventory Report by Lot"
+msgstr "Generazione di report dell'inventario per lotto"
+
+#. module: eur_stock_lot_inventory_report
+#: model_terms:ir.ui.view,arch_db:eur_stock_lot_inventory_report.view_inventory_wizard_form
+msgid "Generate Report"
+msgstr "Genera Report"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__id
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__incoming_qty
+msgid "Incoming quantity"
+msgstr "Quantità in ingresso"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.actions.act_window,name:eur_stock_lot_inventory_report.action_open_inventory_wizard
+#: model:ir.ui.menu,name:eur_stock_lot_inventory_report.menu_inventory_lot_report
+msgid "Inventory Report by Lot"
+msgstr "Report di inventario per lotto"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail____last_update
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__write_uid
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__write_date
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__location_id
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__location_ids
+msgid "Location"
+msgstr "Ubicazione"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__lot_id
+msgid "Lot"
+msgstr "Lotto"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__net_qty
+msgid "Net quantity"
+msgstr "Quantità netta"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__outgoing_qty
+msgid "Outgoing quantity"
+msgstr "Quantità in uscita"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_inventory_detail__product_id
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model.fields,field_description:eur_stock_lot_inventory_report.field_stock_lot_inventory_wizard__date_start
+msgid "Start Date"
+msgstr "Data di inizio"
+
+#. module: eur_stock_lot_inventory_report
+#: model_terms:ir.ui.view,arch_db:eur_stock_lot_inventory_report.stock_inventory_detail_tree
+msgid "Stock Lot Inventory"
+msgstr "Inventario dei lotti in magazzino"
+
+#. module: eur_stock_lot_inventory_report
+#: model:ir.model,name:eur_stock_lot_inventory_report.model_stock_lot_inventory_wizard
+msgid "Wizard for generating stock lot inventory"
+msgstr ""
+"Procedura guidata per la generazione dell'inventario dei lotti di magazzino"
+
+#. module: eur_stock_lot_inventory_report
+#. odoo-python
+#: code:addons/eur_stock_lot_inventory_report/wizard/stock_lot_inventory_wizard.py:0
+#, python-format
+msgid "{} Inventory Detail from {} to {}"
+msgstr "{} Dettaglio inventario dal {} al {}"
