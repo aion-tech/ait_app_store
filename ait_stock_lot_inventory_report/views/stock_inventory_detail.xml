@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+
+    <record id="stock_inventory_detail_list" model="ir.ui.view">
+      <field name="name">stock.inventory.detail.list</field>
+      <field name="model">stock.inventory.detail</field>
+      <field name="arch" type="xml">
+        <list string="Stock Lot Inventory" create="false" edit="false" delete="false">
+          <field name="location_id"/>
+          <field name="product_id"/>
+          <field name="lot_id"/>
+          <field name="incoming_qty"/>
+          <field name="outgoing_qty"/>
+          <field name="net_qty"/>
+        </list>
+      </field>
+    </record>
+
+    <record id="stock_inventory_detail_search" model="ir.ui.view">
+      <field name="name">stock.inventory.detail.search</field>
+      <field name="model">stock.inventory.detail</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="location_id"/>
+          <field name="product_id"/>
+          <field name="lot_id"/>
+          <field name="incoming_qty"/>
+          <field name="outgoing_qty"/>
+          <field name="net_qty"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="stock_inventory_detail_action" model="ir.actions.act_window">
+      <field name="name">Detailed inventory by lot</field>
+      <field name="res_model">stock.inventory.detail</field>
+      <field name="view_mode">list</field>
+      <field name="target">new</field>
+    </record>
+
+  </data>
+</odoo>
