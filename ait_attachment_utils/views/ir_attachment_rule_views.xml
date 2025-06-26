@@ -1,0 +1,85 @@
+<odoo>
+    <!-- Search View -->
+    <record id="view_ir_attachment_rule_search" model="ir.ui.view">
+        <field name="name">ir.attachment.rule.search</field>
+        <field name="model">ir.attachment.rule</field>
+        <field name="arch" type="xml">
+            <search string="Search Attachment Rules">
+                <field name="model_id"/>
+                <field name="domain"/>
+                <field name="max_size"/>
+                <field name="min_size"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_ir_attachment_rule_form" model="ir.ui.view">
+        <field name="name">ir.attachment.rule.form</field>
+        <field name="model">ir.attachment.rule</field>
+        <field name="arch" type="xml">
+            <form string="Attachment Rule">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="model_id"/>
+                            <field name="domain" widget="domain"/>
+                        </group>
+                    </group>
+                    <group string="Size">
+                        <group>
+                            <group string="Maximum">
+                                <field name="max_size"/>
+                                <field name="try_compress"/>
+                            </group>
+                            <group string="Minimum">
+                                <field name="min_size"/>
+                            </group>
+                        </group>
+                    </group>
+                    <group string="Extensions">
+                        <group>
+                            <field name="allowed_extensions"/>
+                            <field name="forbidden_extensions"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View -->
+    <record id="view_ir_attachment_rule_list" model="ir.ui.view">
+        <field name="name">ir.attachment.rule.list</field>
+        <field name="model">ir.attachment.rule</field>
+        <field name="arch" type="xml">
+            <list string="Attachment Rules" default_order="sequence,id">
+                <field name="sequence"/>
+                <field name="model_id"/>
+                <field name="domain"/>
+                <field name="max_size"/>
+                <field name="min_size"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="ir_attachment_rule_window_action" model="ir.actions.act_window">
+        <field name="name">Attachment Rules</field>
+        <field name="res_model">ir.attachment.rule</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create and manage attachment rules to control size and file type constraints.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menuitem -->
+    <menuitem
+            id="menu_ir_attachment_rule"
+            name="Attachment Rules"
+            action="ir_attachment_rule_window_action"
+            parent="base.menu_custom"
+            sequence="40"/>
+</odoo>
