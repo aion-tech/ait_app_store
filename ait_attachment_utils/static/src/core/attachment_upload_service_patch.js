@@ -1,0 +1,143 @@
+/** @odoo-module **/
+
+import { patch } from "@web/core/utils/patch";
+import { AttachmentUploadService } from "@mail/core/common/attachment_upload_service";
+import { _t } from "@web/core/l10n/translation";
+
+patch(AttachmentUploadService.prototype, {
+
+    setup(env, services) {
+        // Chiamata al metodo originale per inizializzare tutto correttamente
+        this._super?.(env, services);
+
+        // Ora puoi aggiungere le tue proprietà o logiche aggiuntive
+        this.abortByAttachmentId = new Map();
+        this.deferredByAttachmentId = new Map();
+        this.uploadingAttachmentIds = new Set();
+        this.hookersByTmpId = new Map();
+
+        this.fileUploadService.bus.addEventListener(
+            "FILE_UPLOAD_ADDED",
+            ({ detail: { upload } }) => {
+                const tmpId = parseInt(upload.params.temporary_id);
+                if (!this.uploadingAttachmentIds.has(tmpId)) {
+                    return;
+                }
+                const hooker = this.hookersByTmpId.get(tmpId);
+                const threadId = parseInt(upload.params.thread_id);
+                const threadModel = upload.params.thread_model;
+                const tmpUrl = upload.params.tmp_url;
+                const originThread = this.store.Thread.insert({
+                    model: threadModel,
+                    id: threadId,
+                });
+                this.abortByAttachmentId.set(tmpId, upload.xhr.abort.bind(upload.xhr));
+                const attachment = this.store.Attachment.insert(
+                    this._makeAttachmentData(
+                        upload,
+                        tmpId,
+                        hooker.composer ? undefined : originThread,
+                        tmpUrl
+                    )
+                );
+                if (hooker.composer) {
+                    hooker.composer.attachments.push(attachment);
+                }
+            }
+        );
+        this.fileUploadService.bus.addEventListener(
+            "FILE_UPLOAD_LOADED",
+            ({ detail: { upload } }) => {
+                const tmpId = parseInt(upload.params.temporary_id);
+                if (!this.uploadingAttachmentIds.has(tmpId)) {
+                    return;
+                }
+                this.uploadingAttachmentIds.delete(tmpId);
+                this.abortByAttachmentId.delete(tmpId);
+                const hooker = this.hookersByTmpId.get(tmpId);
+                if (upload.xhr.status === 413) {
+                    this.notificationService.add(_t("File too large"), { type: "danger" });
+                    this.hookersByTmpId.delete(tmpId);
+                    return;
+                }
+                if (upload.xhr.status !== 200) {
+                    this.notificationService.add(_t("Server error"), { type: "danger" });
+                    this.hookersByTmpId.delete(tmpId);
+
+                    const thread = this.store.Thread.get({
+                        id: parseInt(upload.params.thread_id),
+                        model: upload.params.thread_model,
+                    });
+                    if (thread?.load) {
+                        thread.load();
+                    }
+
+                    return;
+                }
+                const response = JSON.parse(upload.xhr.response);
+                if (response.error) {
+                    this.notificationService.add(response.error, { type: "danger" });
+
+                    const tmpAttachment = this.store.Attachment.get(tmpId);
+                    if (tmpAttachment) {
+                        this.unlink(tmpAttachment);
+                    }
+
+                    if (hooker?.composer) {
+                        const index = hooker.composer.attachments.findIndex((att) => att.id === tmpId);
+                        if (index >= 0) {
+                            hooker.composer.attachments.splice(index, 1);
+                        }
+                        hooker.composer.activeUpload = false;
+                    }
+
+                    this.abortByAttachmentId.delete(tmpId);
+                    this.deferredByAttachmentId.delete(tmpId);
+                    this.uploadingAttachmentIds.delete(tmpId);
+                    this.hookersByTmpId.delete(tmpId);
+
+                    return;
+                }
+
+                const threadId = parseInt(upload.params.thread_id);
+                const threadModel = upload.params.thread_model;
+                const originThread = this.store.Thread.get({ model: threadModel, id: threadId });
+                const attachment = this.store.Attachment.insert({
+                    ...response,
+                    extension: upload.title.split(".").pop(),
+                    originThread: hooker.composer ? undefined : originThread,
+                });
+                if (hooker.composer) {
+                    const index = hooker.composer.attachments.findIndex(({ id }) => id === tmpId);
+                    if (index >= 0) {
+                        hooker.composer.attachments[index] = attachment;
+                    } else {
+                        hooker.composer.attachments.push(attachment);
+                    }
+                }
+                const def = this.deferredByAttachmentId.get(tmpId);
+                this.unlink(this.store.Attachment.get(tmpId));
+                if (def) {
+                    def.resolve(attachment);
+                    this.deferredByAttachmentId.delete(tmpId);
+                }
+                hooker.onFileUploaded?.();
+                this.hookersByTmpId.delete(tmpId);
+            }
+        );
+        this.fileUploadService.bus.addEventListener(
+            "FILE_UPLOAD_ERROR",
+            ({ detail: { upload } }) => {
+                const tmpId = parseInt(upload.params.temporary_id);
+                if (!this.uploadingAttachmentIds.has(tmpId)) {
+                    return;
+                }
+                this.abortByAttachmentId.delete(tmpId);
+                this.deferredByAttachmentId.delete(tmpId);
+                this.uploadingAttachmentIds.delete(tmpId);
+                this.hookersByTmpId.delete(tmpId);
+            }
+        );
+    },
+
+});
