@@ -1,0 +1,240 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* attachment_utils
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e-20241007\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-28 15:10+0000\n"
+"PO-Revision-Date: 2025-03-28 15:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: attachment_utils
+#. odoo-python
+#: code:addons/attachment_utils/models/attachment_rule.py:0
+#, python-format
+msgid "%s is %s %s"
+msgstr ""
+
+#. module: attachment_utils
+#. odoo-python
+#: code:addons/attachment_utils/models/attachment_rule.py:0
+#, python-format
+msgid "%s is not an allowed file extension"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__allowed_extensions
+msgid "Allowed Extensions"
+msgstr ""
+
+#. module: attachment_utils
+#. odoo-python
+#: code:addons/attachment_utils/models/attachment_rule.py:0
+#, python-format
+msgid "Allowed attachment extensions are: %s"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model,name:attachment_utils.model_ir_attachment
+msgid "Attachment"
+msgstr "Allegato"
+
+#. module: attachment_utils
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_form
+msgid "Attachment Rule"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.actions.act_window,name:attachment_utils.ir_attachment_rule_window_action
+#: model:ir.model,name:attachment_utils.model_ir_attachment_rule
+#: model:ir.ui.menu,name:attachment_utils.menu_ir_attachment_rule
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_tree
+msgid "Attachment Rules"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__try_compress
+msgid "Attempt compression if the file is above the maximum size."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__allowed_extensions
+msgid "Comma separated list of allowed file extensions"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__forbidden_extensions
+msgid "Comma separated list of forbidden file extesions"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__try_compress
+msgid "Compress"
+msgstr ""
+
+#. module: attachment_utils
+#: model_terms:ir.actions.act_window,help:attachment_utils.ir_attachment_rule_window_action
+msgid "Create and manage attachment rules."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__domain
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_form
+msgid "Domain"
+msgstr ""
+
+#. module: attachment_utils
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_form
+msgid "Extensions"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__forbidden_extensions
+msgid "Forbidden Extensions"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__force_max_size
+msgid "Force Maximum Size"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__force_min_size
+msgid "Force Minimum Size"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__id
+msgid "ID"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__sequence
+msgid ""
+"If a record on a model matches multiple rules, the rule with the lowest "
+"sequence number will be applied."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__warn_max_size
+msgid "Log a non-blocking warning if the file is above the maximum size."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__warn_min_size
+msgid "Log a non-blocking warning if the file is below the minimum size."
+msgstr ""
+
+#. module: attachment_utils
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_form
+msgid "Max Size"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__max_size
+msgid "Maximum Size (bytes)"
+msgstr ""
+
+#. module: attachment_utils
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_form
+msgid "Min Size"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__min_size
+msgid "Minimum Size (bytes)"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__model_id
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_form
+msgid "Model"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__force_max_size
+msgid ""
+"Raise if the file is above the maximum size.If 'Compress' is enabled, "
+"attempt to compress it before raising."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__force_min_size
+msgid "Raise if the file is below the minimum size."
+msgstr ""
+
+#. module: attachment_utils
+#: model_terms:ir.ui.view,arch_db:attachment_utils.view_ir_attachment_rule_search
+msgid "Search Attachment Rules"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__domain
+msgid ""
+"This rule will apply only to attachments linked to records that match this "
+"domain."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,help:attachment_utils.field_ir_attachment_rule__model_id
+msgid "This rule will apply only to attachments linked to this model."
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__warn_max_size
+msgid "Warn if Above Maximum Size"
+msgstr ""
+
+#. module: attachment_utils
+#: model:ir.model.fields,field_description:attachment_utils.field_ir_attachment_rule__warn_min_size
+msgid "Warn if Below Minimum Size"
+msgstr ""
+
+#. module: attachment_utils
+#. odoo-python
+#: code:addons/attachment_utils/controllers/main.py:0
+#, python-format
+msgid "You are not allowed to upload an attachment here."
+msgstr ""
