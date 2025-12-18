@@ -1,5 +1,5 @@
 from odoo import _, http
-from odoo.addons.attachment_utils.models.attachment_rule import AttachmentRuleException
+from odoo.addons.ait_attachment_utils.models.attachment_rule import AttachmentRuleException
 from odoo.addons.mail.controllers.discuss import DiscussController
 from odoo.exceptions import AccessError, UserError
 from odoo.http import request

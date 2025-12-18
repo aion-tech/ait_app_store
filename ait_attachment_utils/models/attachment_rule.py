@@ -3,7 +3,7 @@ from typing import Any, List, Literal, Tuple, Union
 
 from markupsafe import Markup
 from odoo import _, api, fields, models
-from odoo.addons.attachment_utils.compression.utils import get_extension
+from odoo.addons.ait_attachment_utils.compression.utils import get_extension
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools.safe_eval import safe_eval
 
