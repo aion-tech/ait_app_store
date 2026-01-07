@@ -70,7 +70,7 @@ class AitStockLocationResPartner(models.Model):
         # Call the create method of the parent class to perform the actual creation of the records
         res = super(AitStockLocationResPartner, self).create(vals_list)
         for record in res:
-            if res.dedicated_subcontracting_location:
+            if record.dedicated_subcontracting_location:
                 parent_id = self._check_dedicated_location('subcontracting_parent')
                 sub_vendor_location = self.env['stock.location'].search([
                     ('location_id', '=', parent_id),
@@ -80,7 +80,7 @@ class AitStockLocationResPartner(models.Model):
                     record.property_stock_subcontractor = sub_vendor_location[0]
                     record.dedicated_subcontracting_location_created = True
 
-            if res.dedicated_vendor_location:
+            if record.dedicated_vendor_location:
                 parent_id = self._check_dedicated_location('vendor_parent')
                 vendor_location = self.env['stock.location'].search([
                     ('location_id', '=', parent_id),
@@ -90,7 +90,7 @@ class AitStockLocationResPartner(models.Model):
                     record.property_stock_supplier = vendor_location[0]
                     record.dedicated_vendor_location_created = True
 
-            if res.dedicated_customer_location:
+            if record.dedicated_customer_location:
                 parent_id = self._check_dedicated_location('customer_parent')
                 customer_location = self.env['stock.location'].search([
                     ('location_id', '=', parent_id),
@@ -100,7 +100,7 @@ class AitStockLocationResPartner(models.Model):
                     record.property_stock_customer = customer_location[0]
                     record.dedicated_customer_location_created = True
 
-            if res.dedicated_rental_location:
+            if record.dedicated_rental_location:
                 parent_id = self._check_dedicated_location('rental_parent')
                 rental_location = self.env['stock.location'].search([
                     ('location_id', '=', parent_id),
@@ -109,7 +109,6 @@ class AitStockLocationResPartner(models.Model):
                 if rental_location:
                     record.property_stock_rental = rental_location[0]
                     record.dedicated_rental_location_created = True
-
         # Return the result of the create method
         return res
 

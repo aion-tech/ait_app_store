@@ -15,7 +15,7 @@
     "support": "support@aion-tech.odoo.com",
 
     "category": "Warehouse",
-    'version': '16.0.1.0.1',
+    'version': '16.0.1.0.2',
 
     'depends': ['stock', 'mrp_subcontracting'],
 
