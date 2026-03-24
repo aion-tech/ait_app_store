@@ -91,7 +91,7 @@ class StockLotHistory(models.TransientModel):
             "type": "ir.actions.act_window",
             "res_model": "stock.inventory.detail",
             "view_mode": "list",
-            "target": "new",
+            "target": "current",
         }
 
     # EUR-114

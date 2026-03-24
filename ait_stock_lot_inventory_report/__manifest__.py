@@ -27,7 +27,7 @@
     "support": "support@aiontech.odoo.com",
 
     "category": "Inventory Management",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.0.1",
 
     "depends": ["base", "stock"],
 
