@@ -13,6 +13,7 @@
         "security/ir.model.access.csv",
         "views/ir_attachment_rule_views.xml",
     ],
+    "license": "LGPL-3",
     # "assets": {
     #     "web.assets_backend": [
     #         "ait_attachment_utils/static/src/core/attachment_upload_service_patch.js",
